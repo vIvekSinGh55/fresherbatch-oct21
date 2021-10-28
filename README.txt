@@ -1,6 +1,6 @@
 this is readme text file from step no23
 <<<<<<< HEAD
-
+line no 3 edit as per st8
 after switching to master as per step 32 
 =======
 hii html branch
