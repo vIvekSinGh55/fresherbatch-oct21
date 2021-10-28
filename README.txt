@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 line 1 & commit those changes into master.
+=======
+js assignment brach as per st5
+>>>>>>> js-assignments
 css assignments added in it
 this is readme text file from step no23
 <<<<<<< HEAD
