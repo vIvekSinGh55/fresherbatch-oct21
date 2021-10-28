@@ -1,3 +1,4 @@
+css assignments added in it
 this is readme text file from step no23
 <<<<<<< HEAD
 line no 3 edit as per st8
