@@ -1,0 +1,16 @@
+db.zipcodes.find({$and:[{city:"ATLANTA"},{state:"GA"}]})
+
+db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"$id"}},{$count:"unique_zipcodes"}])
+{ unique_zipcodes: 1 }
+
+db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"city",totalpopulationinAtlanta:{$sum:"pop"}}}])
+
+db.zipcodes.aggregate([{$group:{_id:"$state",statewisepopulation:{$sum:"$pop"}}}])
+
+db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},population:{$sum:"$pop"}}},{$sort:{population:-1}}])
+
+
+db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"state"},population:{$sum:"$pop"}}},{$sort:{population:-1}},{$limit:(3)}])
+
+
+db.zipcodes.aggregate([{$group:{_id:{state:"$state",city:"$city"},Avgpop:{$avg:"$pop"}}}])
